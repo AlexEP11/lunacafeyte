@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <title>Luna Café & Te</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="build/img/logo.avif">
+    <link rel="stylesheet" href="build/css/app.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="contenedor contenido-header">
+            <h1>Luna Café & Te</h1>
+            <nav class="navegacion-principal">
+                <a href="#menu">Menu</a>
+                <a href="#galeria">Galeria</a>
+                <a href="#ubicacion">Ubicacion</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="video">
+        <div class="overlay">
+            <div class="contenedor contenido-logo">
+                <div class="logo">
+                    <picture>
+                        <source srcset="build/img/logo2.avif" type="image/avif">
+                        <source srcset="build/img/logo2.webp" type="image/webp">
+                        <img src="img/logo2.png" alt="logo luna">
+                    </picture>
+                </div>
+                <div class="contenedor contenido-video">
+                    <h2>Luna Café & Te</h2>
+                    <p>Sayula, Jalisco</p>
+                </div>
+            </div>
+        </div>
+
+        <video loop muted autoplay>
+            <source src="video/coffee.mp4" type="video/mp4">
+            <source src="video/coffee.webm" type="video/webm">
+        </video>
+    </div>
+
+    <section class="contenedor sobre-luna">
+        <div class="imagen-sobre-nosotros">
+            <picture>
+                <source srcset="build/img/sobre-nosotros-img.avif" type="image/avif">
+                <source srcset="build/img/sobre-nosotros-img.webp" type="image/webp">
+                <img src="build/img/sobre-nosotros-img.jpg" alt="Imagen Sobre Nosotros">
+            </picture>
+        </div>
+        <div class="contenido-sobre-nosotros">
+            <h2>Luna Café & Te</h2>
+            <p class="ubicacion">Sayula, Jalisco, México</p>
+            <p>En Luna Café & Te, cruzar nuestra puerta no es solo entrar a una cafetería; es sumergirse en un mundo de
+                experiencias sensoriales y momentos compartidos. Desde el instante en que te recibimos, te envolvemos en
+                la magia de Luna, un lugar donde los aromas evocadores y la hospitalidad sincera te dan la bienvenida.
+                <br><br>
+                En Luna Café & Te, nos apasiona crear experiencias únicas y acogedoras para nuestros clientes. Nuestra
+                cafetería es más que un lugar para disfrutar de una taza de café o té; es un rincón especial donde la
+                buena compañía se mezcla con aromas deliciosos y sabores excepcionales.
+            </p>
+        </div>
+    </section>
+
+    <section id="menu" class="opcion-menu">
+        <h3>MENU</h3>
+        <p class="tipo-alimento">Bebidas</p>
+
+        <div class="contenedor-menu contenedor">
+            <div class="menu cafe bg-crema">
+                <p class="nombre-alimento">Espresso</p>
+                <ul class="opciones-alimento">
+                    <li>
+                        <span>Espresso</span>
+                    </li>
+                    <li>
+                        <span>Espresso Doble</span>
+                    </li>
+                    <li>
+                        <span>Cortado</span>
+                    </li>
+                    <li>
+                        <span>Americano</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu bebida bg-cafe-gris">
+                <p class="nombre-alimento">Capuchino</p>
+                <ul class="opciones-alimento">
+                    <li>
+                        <span>Clasico</span>
+                    </li>
+                    <li>
+                        <span>Coco</span>
+                    </li>
+                    <li>
+                        <span>Vainilla</span>
+                    </li>
+                    <li>
+                        <span>Avellana</span>
+                    </li>
+                    <li>
+                        <span>Caramelo</span>
+                    </li>
+                    <li>
+                        <span>Menta</span>
+                    </li>
+                    <li>
+                        <span>Chocolate Blanco</span>
+                    </li>
+                    <li>
+                        <span>Nuéz de Macadamia</span>
+                    </li>
+                    <li>
+                        <span>Crema Irlandesa</span>
+                    </li>
+                    <li>
+                        <span>Amaretto</span>
+                    </li>
+                    <li>
+                        <span>Cajeta</span>
+                    </li>
+                    <li>
+                        <span>Nutella</span>
+                    </li>
+                    <li>
+                        <span>Mazapan</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu cafe bg-cafe-gris">
+                <p class="nombre-alimento">Chocolate</p>
+                <ul class="opciones-alimento">
+                    <li>
+                        <span>Clasico</span>
+                    </li>
+                    <li>
+                        <span>Choco menta</span>
+                    </li>
+                    <li>
+                        <span>Chocolate Helado</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu bebida bg-crema">
+                <p class="nombre-alimento">Frappe con café</p>
+                <ul class="opciones-alimento">
+                    <li>
+                        <span>Chocolate Blanco</span>
+                    </li>
+                    <li>
+                        <span>Caramelo</span>
+                    </li>
+                    <li>
+                        <span>Mocha</span>
+                    </li>
+                    <li>
+                        <span>Oreo</span>
+                    </li>
+                    <li>
+                        <span>Kahlúa</span>
+                    </li>
+                    <li>
+                        <span>Mazapan</span>
+                    </li>
+                    <li>
+                        <span>Arándano</span>
+                    </li>
+                    <li>
+                        <span>Cajeta Lugo Naranja</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu cafe bg-crema">
+                <p class="nombre-alimento">Latte</p>
+                <ul class="opciones-alimento">
+                    <li>
+                        <span>Clasico</span>
+                    </li>
+                    <li>
+                        <span>Vainilla</span>
+                    </li>
+                    <li>
+                        <span>Avellana</span>
+                    </li>
+                    <li>
+                        <span>Caramelo</span>
+                    </li>
+                    <li>
+                        <span>Coco</span>
+                    </li>
+                    <li>
+                        <span>Amaretto</span>
+                    </li>
+                    <li>
+                        <span>Menta</span>
+                    </li>
+                    <li>
+                        <span>Chocolate Blanco</span>
+                    </li>
+                    <li>
+                        <span>Crema Irlandesa</span>
+                    </li>
+                    <li>
+                        <span>Nuez de Macadamia</span>
+                    </li>
+                    <li>
+                        <span>Cajeta Lugo</span>
+                    </li>
+                    <li>
+                        <span>Nutella</span>
+                    </li>
+                    <li>
+                        <span>Taro</span>
+                    </li>
+                    <li>
+                        <span>Matcha</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu bebida bg-cafe-gris">
+                <p class="nombre-alimento">Soda Italiana</p>
+                <ul class="opciones-alimento">
+                    <li>
+                        <span>Fresa</span>
+                    </li>
+                    <li>
+                        <span>Mango</span>
+                    </li>
+                    <li>
+                        <span>Durazno</span>
+                    </li>
+                    <li>
+                        <span>Mora Azul</span>
+                    </li>
+                    <li>
+                        <span>Manzana Verde</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu cafe bg-cafe-gris">
+                <p class="nombre-alimento">Tés</p>
+                <ul class="opciones-alimento">
+                    <li>
+                        <span>Menta</span>
+                    </li>
+                    <li>
+                        <span>Chai Coco</span>
+                    </li>
+                    <li>
+                        <span>Chai Manzana</span>
+                    </li>
+                    <li>
+                        <span>Roibos Masala</span>
+                    </li>
+                    <li>
+                        <span>Bancha</span>
+                    </li>
+                    <li>
+                        <span>Pu-ERH Caramelo</span>
+                    </li>
+                    <li>
+                        <span>Manzanilla Lavanda</span>
+                    </li>
+                    <li>
+                        <span>Roibos Lavanda</span>
+                    </li>
+                    <li>
+                        <span>Verde Mango / Cardamomo</span>
+                    </li>
+                    <li>
+                        <span>Bai Mun Dan. Detox</span>
+                    </li>
+                    <li>
+                        <span>Darjeeling</span>
+                    </li>
+                    <li>
+                        <span>California</span>
+                    </li>
+                    <li>
+                        <span>Ear Gray</span>
+                    </li>
+                    <li>
+                        <span>OOLONG</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu bebida bg-crema">
+                <p class="nombre-alimento">Frappe sín café</p>
+                <ul class="opciones-alimento">
+                    <li>
+                        <span>Fresa</span>
+                    </li>
+                    <li>
+                        <span>Oreo</span>
+                    </li>
+                    <li>
+                        <span>Vainilla</span>
+                    </li>
+                    <li>
+                        <span>Taro</span>
+                    </li>
+                    <li>
+                        <span>Arándano</span>
+                    </li>
+                    <li>
+                        <span>Matcha</span>
+                    </li>
+                    <li>
+                        <span>Chai Mazana Canela</span>
+                    </li>
+                    <li>
+                        <span>Chai Clasico (original)</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu cafe bg-crema">
+                <p class="nombre-alimento">Tisanas</p>
+                <ul class="opciones-alimento">
+                    <li>
+                        <span>Platano Cereza</span>
+                    </li>
+                    <li>
+                        <span>Guayaba en Ponche</span>
+                    </li>
+                    <li>
+                        <span>Locura de Moras</span>
+                    </li>
+                    <li>
+                        <span>Fresa kiwi</span>
+                    </li>
+                    <li>
+                        <span>Arándano Manzana</span>
+                    </li>
+                    <li>
+                        <span>Fruta Pasión</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu bebida bg-cafe-gris">
+                <p class="nombre-alimento">Tisanas Frappe</p>
+                <ul class="opciones-alimento">
+                    <li>
+                        <span>Yogurt o Cristal</span>
+                    </li>
+                    <li>
+                        <span>Platano Cereza</span>
+                    </li>
+                    <li>
+                        <span>Guayaba en Ponche</span>
+                    </li>
+                    <li>
+                        <span>Locura de Moras</span>
+                    </li>
+                    <li>
+                        <span>Fresa kiwi</span>
+                    </li>
+                    <li>
+                        <span>Arándano Manzana</span>
+                    </li>
+                    <li>
+                        <span>Lima Limón</span>
+                    </li>
+                    <li>
+                        <span>Manzana Dorada</span>
+                    </li>
+                    <li>
+                        <span>Fruta Pasión</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu cafe bg-cafe-gris">
+                <p class="nombre-alimento">Chai late</p>
+                <ul class="opciones-alimento">
+                    <li>
+                        <span>Té Verde</span>
+                    </li>
+                    <li>
+                        <span>Clásico</span>
+                    </li>
+                    <li>
+                        <span>Manzana Canela</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu bebida bg-crema">
+                <p class="nombre-alimento">Boba (Tapioca)</p>
+                <ul class="opciones-alimento">
+                    <li>
+                        <span>Taro</span>
+                    </li>
+                    <li>
+                        <span>Matcha</span>
+                    </li>
+                </ul>
+            </div>
+        </div> <!-- Fin del contenedor del menu-bebidas -->
+
+
+
+        <p class="tipo-alimento">Postres</p>
+
+        <div class="contenedor-menu-largo contenedor">
+            <div class="menu postre bg-crema">
+                <p class="nombre-alimento">Reposteria</p>
+                <ul class="opciones-alimento">
+                    <li>
+                        <span>Pastel de Zanahoria</span>
+                    </li>
+                    <li>
+                        <span>Chessecake Frambuesa</span>
+                    </li>
+                    <li>
+                        <span>Pastel de Chocolate</span>
+                    </li>
+                    <li>
+                        <span>Chessecake Chocolate</span>
+                    </li>
+                    <li>
+                        <span>Choco Flan</span>
+                    </li>
+                    <li>
+                        <span>Donitas</span>
+                    </li>
+                    <li>
+                        <span>Galletas de Chispas</span>
+                    </li>
+                </ul>
+            </div>
+        </div> <!-- Fin del contenedor del menu-postres -->
+
+
+        <p class="tipo-alimento">Ensaladas</p>
+
+        <div class="contenedor-menu contenedor">
+            <div class="menu comida bg-crema">
+                <p class="nombre-alimento">Ensalada Verde</p>
+                <p class="opciones-alimento-unico">
+                    Mix de lechugas <br>
+                    Espinaca y Arugula <br>
+                    Acompañada de Jitomate <br>
+                    Cebolla / Morrón / Germinado de alfalfa / Pepino / Nuez <br>
+                    Vinagreta Italiana <br>
+                    Aderezo a tu eleccion
+                </p>
+            </div>
+
+            <div class="menu comida bg-cafe-gris">
+                <p class="nombre-alimento">Ensalada Frutos Rojos</p>
+                <p class="opciones-alimento-unico">
+                    Mix de lechugas <br>
+                    Espinaca y Arugula <br>
+                    Acompañada de Fresa <br>
+                    Arándano / Frambuesa / Coco Tostado / Almendra <br>
+                    Vinagreta de Frambuesa <br>
+                    Aderezo a tu eleccion
+                </p>
+            </div>
+        </div> <!-- Fin del contenedor del menu-ensaladas -->
+
+
+        <p class="tipo-alimento">Hamburguesas</p>
+
+        <div class="contenedor-menu contenedor">
+            <div class="menu hamburguesa bg-crema">
+                <p class="nombre-alimento">Camaron Empanizado Crunch</p>
+                <p class="opciones-alimento-unico">
+                    Mix de lechugas <br>
+                    Espinaca y Arugula <br>
+                    Acompañada de Jitomate <br>
+                    Cebolla / Morrón / Germinado de alfalfa / Pepino / Nuez <br>
+                    Vinagreta Italiana <br>
+                    Aderezo a tu eleccion
+                </p>
+            </div>
+
+            <div class="menu hamburguesa bg-cafe-gris">
+                <p class="nombre-alimento">Hamburguesa de Res (Sirloin)</p>
+                <p class="opciones-alimento-unico">
+                    100g de carne de Res <br>
+                    Jitomate / Cebolla / Lechuga / Queso Amarillo <br>
+                    Aderezo especial de la casa
+                </p>
+            </div>
+
+        </div> <!-- Fin del contenedor del menu-hamburguesas -->
+
+        <br>
+        <div class="contenedor-menu-largo contenedor">
+            <div class="menu hamburguesa bg-crema">
+                <p class="nombre-alimento">Hamburguesa de Pollo Empanizado</p>
+                <p class="opciones-alimento-unico">
+                    Carne de Pollo <br>
+                    Jitomate / Cebolla / Lechuga / Queso Amarillo <br>
+                </p>
+            </div>
+
+        </div> <!-- Fin del contenedor del menu-hamburguesa/pollo/unico -->
+
+
+        <p class="tipo-alimento">Baguettes</p>
+
+        <div class="contenedor-menu contenedor">
+            <div class="menu bread bg-crema">
+                <p class="nombre-alimento">Baguette de Milanesa de Pollo</p>
+                <p class="opciones-alimento-unico">
+                    Empanizado crujiente <br>
+                    Mix de lechuga / Jitomate / Cebolla/ Morron / <br>
+                    Queso Gouda / Ranch/ Chipotle
+                </p>
+            </div>
+
+            <div class="menu bread bg-cafe-gris">
+                <p class="nombre-alimento">Baguette de Alambre</p>
+                <p class="opciones-alimento-unico">
+                    Bistec de Res <br>
+                    Tocino <br>
+                    Salteado con Morron y Cebolla <br>
+                    Mix de Lechugas / Jitomate / Cebolla / Queso Gouda <br>
+                    Aderezo Ranch y Chipotle
+                </p>
+            </div>
+
+        </div> <!-- Fin del contenedor del menu-baguettes -->
+
+        <br>
+        <div class="contenedor-menu-largo contenedor">
+            <div class="menu bread bg-crema">
+                <p class="nombre-alimento">Baguette Italiano</p>
+                <p class="opciones-alimento-unico">
+                    3 Carnes <br>
+                    Peperoni / Salami / Jamon <br>
+                    Acompañado de un delicioso Queso Gouda
+                </p>
+            </div>
+
+        </div> <!-- Fin del contenedor del menu-baguettes/italiano/unico -->
+
+
+        <p class="tipo-alimento">Crepas</p>
+        <div class="contenedor-menu contenedor">
+            <div class="menu crepa bg-crema">
+                <p class="nombre-alimento">Saladas</p>
+                <ul class="opciones-alimento">
+                    <li>
+                        <span>Jamon</span>
+                    </li>
+                    <li>
+                        <span>Queso</span>
+                    </li>
+                    <li>
+                        <span>Piña</span>
+                    </li>
+                    <li>
+                        <span>Peperoni</span>
+                    </li>
+                    <li>
+                        <span>Pollo con tocino</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu crepa bg-cafe-gris">
+                <p class="nombre-alimento">Dulces</p>
+                <ul class="opciones-alimento">
+                    <li>
+                        <span>Nutella</span>
+                    </li>
+                    <li>
+                        <span>Mermelada de frutos rojos</span>
+                    </li>
+                    <li>
+                        <span>Philadelphia</span>
+                    </li>
+                    <li>
+                        <span>Cajeta</span>
+                    </li>
+                    <li>
+                        <span>Lechera</span>
+                    </li>
+                    <li>
+                        <span>Nieve</span>
+                    </li>
+                    <li>
+                        <span>Durázno</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="galeria" class="galeria contenedor">
+        <h3>Galeria de Imagenes</h3>
+        <ul class="galeria-imagenes"></ul>
+    </section>
+
+
+    <section id="ubicacion" class="maps">
+        <h3>Ubicacion</h3>
+        <div class="contenedor contenedor-maps">
+            <div id="map"></div>
+        </div>
+    </section>
+
+
+    <footer class="footer-redes">
+        <div class="contenedor contenedor-redes">
+
+            <div class="facebook">
+                <picture>
+                    <source srcset="build/img/redes/facebook.avif" type="image/avif">
+                    <source srcset="build/img/redes/facebook.webp" type="image/webp">
+                    <img src="build/img/redes/facebook.jpg" alt="Imagen Red Social Facebook">
+                </picture>
+                <h4>Facebook</h4>
+            </div>
+
+            <div class="instagram">
+                <picture>
+                    <source srcset="build/img/redes/instagram.avif" type="image/avif">
+                    <source srcset="build/img/redes/instagram.webp" type="image/webp">
+                    <img src="build/img/redes/instagram.jpg" alt="Imagen Red Social instagram">
+                </picture>
+                <h4>Instagram</h4>
+            </div>
+        </div>
+    </footer>
+
+    <script src="build/js/app.js"></script>
+
+</body>
+
+
+</html>
