@@ -1,0 +1,31 @@
+@use "base/mixins" as m;
+@use "base/variables" as v;
+
+
+.footer-redes {
+    background-color: v.$crema;
+}
+
+.contenedor-redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    gap: 10rem; 
+
+
+}
+
+.facebook, .instagram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        margin-right: 1rem;
+        display: block;
+        width: 5rem;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+
+}

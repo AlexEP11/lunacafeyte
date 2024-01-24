@@ -1,0 +1,29 @@
+@use "base/variables"as v;
+@use "base/mixins" as m;
+
+.maps {
+    display: block;
+    padding: 5rem 0;
+    background-color: v.$cafe;
+    h3 {
+        text-align: center;
+        color: v.$blanco;
+    }
+}
+
+.contenedor-maps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem;
+
+    @include m.desktop {
+        margin: 0 auto;
+    }
+}
+
+#map {
+    z-index: 0;
+    width: 90rem;
+    height: 50rem;
+}

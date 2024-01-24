@@ -1,0 +1,121 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.opcion-menu {
+    background-color: v.$cafe;
+    padding: 5rem 0;
+    
+    h3, p {
+        color: v.$blanco;
+        text-align: center;
+    }
+    
+    .tipo-alimento {
+        text-transform: uppercase;
+        margin-bottom: 5rem;
+        margin-top: 5rem
+    }
+
+    .opciones-alimento-unico {
+        color: v.$negro;
+        font-family: v.$fuente_principal;
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+}
+
+
+
+.contenedor-menu {
+    @include m.tablet {
+        @include m.grid(2, 5rem);
+    }
+
+}
+
+
+.menu {
+    padding-top: 2rem;
+    margin: 1.5rem;
+
+    p {
+        &:after {
+            content: '';
+            display: block;
+            width: 7rem;
+            height: 7rem;
+            background-size: 5rem;
+            background-repeat: no-repeat;
+            background-position: center center;
+            margin: 1rem auto 0 auto;
+        }
+    }
+
+    .nombre-alimento {
+        font-weight: 700;
+        color: v.$negro;
+    }
+}
+
+
+.bebida .nombre-alimento:after {
+    background-image: url("../../build/img/menu/cup.png");
+}
+
+.cafe .nombre-alimento:after {
+    background-image: url("../../build/img/menu/coffee.png");
+}
+
+.comida .nombre-alimento:after {
+    background-image: url("../../build/img/menu/salad.png");
+}
+
+.postre .nombre-alimento:after {
+    background-image: url("../../build/img/menu/candy.png");
+}
+
+.hamburguesa .nombre-alimento:after {
+    background-image: url("../../build/img/menu/burger.png");
+}
+
+.bread .nombre-alimento:after {
+    background-image: url("../../build/img/menu/bread.png");
+}
+
+.crepa .nombre-alimento:after {
+    background-image: url("../../build/img/menu/brand-nuxt.png");
+}
+
+
+
+.opciones-alimento {
+    @include m.resetearLista;
+    li {
+        padding: 2.5rem;
+        color: v.$negro;
+        font-family: v.$fuente_principal;
+        font-weight: 700;
+    }
+}
+
+.contenedor-menu-largo{
+    .opciones-alimento {
+        padding: 0;
+        text-align: center;
+    }
+}
+
+.bg-crema {
+    background-color: v.$crema;
+
+    li:nth-child(odd) {
+        background-color: darken(v.$crema,10);
+    }
+}
+
+.bg-cafe-gris {
+    background-color: v.$cafe_gris;
+    li:nth-child(odd) {
+        background-color: darken(v.$cafe_gris,10);
+    }
+}
